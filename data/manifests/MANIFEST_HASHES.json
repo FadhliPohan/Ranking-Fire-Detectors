@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "manifests": {
+    "dfire_train": {
+      "name": "dfire_train",
+      "source": "dfire",
+      "split": "train",
+      "n_samples": 14852,
+      "created_utc": "2026-08-22T03:08:11+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "063f268161800a243be8a67ed29d71b799718c489773e351e10bcf3e00918540",
+      "immutable": false,
+      "generator_config_hash": "514cc803c6d3be7809a3b2f9b7f0281baeb5725b009cbbbf380c67a2204823f0",
+      "notes": "built by 02_build_manifests from data/curated/dfire",
+      "file": "dfire_train.parquet"
+    },
+    "dfire_val": {
+      "name": "dfire_val",
+      "source": "dfire",
+      "split": "val",
+      "n_samples": 3418,
+      "created_utc": "2026-08-22T03:08:11+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "9fe02989d64c097cb5f2b9a84465d072bd770ceebbc57dec250331137043df16",
+      "immutable": false,
+      "generator_config_hash": "514cc803c6d3be7809a3b2f9b7f0281baeb5725b009cbbbf380c67a2204823f0",
+      "notes": "built by 02_build_manifests from data/curated/dfire",
+      "file": "dfire_val.parquet"
+    },
+    "dfire_test": {
+      "name": "dfire_test",
+      "source": "dfire",
+      "split": "test",
+      "n_samples": 3257,
+      "created_utc": "2026-08-19T10:32:29+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "6246e1bcca7947392097d8460a33e4e5e5823c8ff3c20ebc6d852d3c1af56ae9",
+      "immutable": true,
+      "generator_config_hash": "13d59b3a4c61fc869ef403aca7b4ed3e2b28eb26798d77949a666610e47ba09d",
+      "notes": "built by 02_build_manifests from Aplikasi/data/curated/dfire",
+      "file": "dfire_test.parquet",
+      "frozen_utc": "2026-08-22T03:08:11+00:00"
+    },
+    "wildfire_train": {
+      "name": "wildfire_train",
+      "source": "wildfire",
+      "split": "train",
+      "n_samples": 1933,
+      "created_utc": "2026-08-22T03:08:31+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "d771f1849f8f4772ad47f85997c98758519b3e23aa578e208c0393b2009e1abe",
+      "immutable": false,
+      "generator_config_hash": "514cc803c6d3be7809a3b2f9b7f0281baeb5725b009cbbbf380c67a2204823f0",
+      "notes": "built by 02_build_manifests from data/curated/wildfire",
+      "file": "wildfire_train.parquet"
+    },
+    "wildfire_val": {
+      "name": "wildfire_val",
+      "source": "wildfire",
+      "split": "val",
+      "n_samples": 413,
+      "created_utc": "2026-08-22T03:08:31+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "334244cf8af5ce4d0c334c7c428c6572d4829ae58cea42bc90a1bc479e3a07af",
+      "immutable": false,
+      "generator_config_hash": "514cc803c6d3be7809a3b2f9b7f0281baeb5725b009cbbbf380c67a2204823f0",
+      "notes": "built by 02_build_manifests from data/curated/wildfire",
+      "file": "wildfire_val.parquet"
+    },
+    "wildfire_test": {
+      "name": "wildfire_test",
+      "source": "wildfire",
+      "split": "test",
+      "n_samples": 353,
+      "created_utc": "2026-08-19T10:32:57+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "fdc87239c608b7cf11f8f7b7e030a3f2199e33b9f5d39fa72eacb9e2895a361c",
+      "immutable": true,
+      "generator_config_hash": "13d59b3a4c61fc869ef403aca7b4ed3e2b28eb26798d77949a666610e47ba09d",
+      "notes": "built by 02_build_manifests from Aplikasi/data/curated/wildfire",
+      "file": "wildfire_test.parquet",
+      "frozen_utc": "2026-08-22T03:08:31+00:00"
+    },
+    "flame3_train": {
+      "name": "flame3_train",
+      "source": "flame3",
+      "split": "train",
+      "n_samples": 1363,
+      "created_utc": "2026-08-22T03:08:49+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "324480c2065b51da546e59d3fc3adc38640daf83bddda05d183a904e008e6967",
+      "immutable": false,
+      "generator_config_hash": "514cc803c6d3be7809a3b2f9b7f0281baeb5725b009cbbbf380c67a2204823f0",
+      "notes": "built by 02_build_manifests from data/curated/flame3",
+      "file": "flame3_train.parquet"
+    },
+    "flame3_test": {
+      "name": "flame3_test",
+      "source": "flame3",
+      "split": "test",
+      "n_samples": 809,
+      "created_utc": "2026-08-19T10:33:28+00:00",
+      "builder_version": "1.0.0",
+      "content_sha256": "bdbaca30970ffe6766ada04141d78b2169d5955d427be702390c9187f87c077a",
+      "immutable": true,
+      "generator_config_hash": "13d59b3a4c61fc869ef403aca7b4ed3e2b28eb26798d77949a666610e47ba09d",
+      "notes": "built by 02_build_manifests from Aplikasi/data/curated/flame3",
+      "file": "flame3_test.parquet",
+      "frozen_utc": "2026-08-22T03:08:49+00:00"
+    }
+  },
+  "updated_utc": "2026-08-22T03:08:49+00:00"
+}

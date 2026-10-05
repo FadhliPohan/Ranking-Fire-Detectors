@@ -1,0 +1,11 @@
+# Analysis notebook (Sections 1 to 14). No GPU and no deep-learning framework needed.
+# Verified with: Python 3.11, numpy 2.4.6, pandas 3.0.5, pyarrow 24.0.0, matplotlib 3.11.1
+# (figures byte-identical to the published ones), and with numpy 1.26.4, pandas 2.2.3,
+# pyarrow 16.1.0, matplotlib 3.8.4 (all numerical checks pass).
+numpy>=1.24
+pandas>=2.0
+pyarrow>=12
+matplotlib>=3.7
+
+# To open and run the notebook.
+jupyterlab>=4.0

@@ -1,0 +1,16 @@
+# Outputs written by the notebook (tables, figures) and local data
+outputs/
+
+# Stored predictions are downloaded separately; keep only the description of their layout
+data/predictions/*
+!data/predictions/README.md
+
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Weights downloaded or produced by the training appendix
+*.pt

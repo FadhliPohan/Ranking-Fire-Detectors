@@ -1,0 +1,4 @@
+label,run_id,params_m,gflops,checkpoint_size_mb,latency_mean_ms,latency_median_ms,latency_p95_ms,fps,peak_vram_gb,imgsz,batch_size,warmup_iters,timed_iters,amp_dtype,gpu,preprocessing_included,nms_included
+YOLO11n,E0__seed42__7a9ae5f5,2.5902,3.22,5.45,4.6868,4.7448,4.8913,213.367,0.0674,640,1,20,100,bfloat16,NVIDIA GeForce RTX 4050 Laptop GPU,False,False
+YOLO11s,E9__seed42__e09e0f3a,9.4286,10.773,19.156,5.0035,5.0021,5.0231,199.861,0.1083,640,1,20,100,bfloat16,NVIDIA GeForce RTX 4050 Laptop GPU,False,False
+YOLOv8s,E10__seed42__d6074a6d,11.1364,14.322,22.497,4.9191,4.9142,5.0297,203.288,0.111,640,1,20,100,bfloat16,NVIDIA GeForce RTX 4050 Laptop GPU,False,False

@@ -1,0 +1,257 @@
+{
+  "sources": {
+    "dfire": {
+      "status": "ok",
+      "root": "data/curated/dfire",
+      "n_records": 21527,
+      "splits": {
+        "train": {
+          "n": 14852,
+          "hash": "063f268161800a24"
+        },
+        "val": {
+          "n": 3418,
+          "hash": "9fe02989d64c097c"
+        },
+        "test": {
+          "n": 3257,
+          "hash": "6246e1bcca794739"
+        }
+      },
+      "split_report": {
+        "counts": {
+          "train": 14852,
+          "val": 3418,
+          "test": 3257
+        },
+        "n_units": 15775,
+        "n_samples": 21527,
+        "unit_source": {
+          "content_hash": 21527,
+          "near_duplicate_merges": 33693
+        },
+        "stratum_counts": {
+          "dfire|f0s0|wuf0": {
+            "train": 4443,
+            "val": 894,
+            "test": 963
+          },
+          "dfire|f0s1|wuf0": {
+            "train": 2719,
+            "val": 618,
+            "test": 649
+          },
+          "dfire|f0s2|wuf0": {
+            "train": 176,
+            "val": 45,
+            "test": 43
+          },
+          "dfire|f0s3|wuf0": {
+            "train": 78,
+            "val": 16,
+            "test": 12
+          },
+          "dfire|f1s0|wuf1": {
+            "train": 283,
+            "val": 61,
+            "test": 58
+          },
+          "dfire|f1s1|wuf1": {
+            "train": 940,
+            "val": 185,
+            "test": 214
+          },
+          "dfire|f1s2|wuf1": {
+            "train": 85,
+            "val": 10,
+            "test": 20
+          },
+          "dfire|f1s3|wuf1": {
+            "train": 6,
+            "val": 4,
+            "test": 1
+          },
+          "dfire|f2s0|wuf1": {
+            "train": 146,
+            "val": 26,
+            "test": 47
+          },
+          "dfire|f2s1|wuf1": {
+            "train": 586,
+            "val": 123,
+            "test": 115
+          },
+          "dfire|f2s2|wuf1": {
+            "train": 74,
+            "val": 20,
+            "test": 16
+          },
+          "dfire|f2s3|wuf1": {
+            "train": 13,
+            "val": 1,
+            "test": 1
+          },
+          "dfire|f3s0|wuf1": {
+            "train": 141,
+            "val": 34,
+            "test": 41
+          },
+          "dfire|f3s1|wuf1": {
+            "train": 1074,
+            "val": 222,
+            "test": 232
+          },
+          "dfire|f3s2|wuf1": {
+            "train": 210,
+            "val": 53,
+            "test": 36
+          },
+          "dfire|f3s3|wuf1": {
+            "train": 27,
+            "val": 5,
+            "test": 9
+          }
+        },
+        "respected_native": false,
+        "warnings": [
+          "stratum 'dfire|f2s3|wuf1' was rebalanced to appear in every split; its assignment is deterministic but not stable if this stratum later grows"
+        ]
+      },
+      "verification": {
+        "ok": true,
+        "n_cross_split_exact": 0,
+        "n_cross_split_near": 0,
+        "n_group_violations": 0
+      },
+      "adapter_warnings": [
+        "data/curated/dfire/test/labels/AoF07743.txt:3: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/test/labels/AoF07774.txt:3: degenerate box w=0.00078125 h=0.0",
+        "data/curated/dfire/test/labels/AoF08348.txt:2: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/test/labels/WEB10669.txt:5: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/train/labels/AoF05470.txt:2: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/train/labels/AoF06155.txt:2: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/train/labels/AoF06348.txt:2: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/train/labels/AoF06439.txt:2: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/train/labels/AoF06456.txt:2: degenerate box w=0.0 h=0.0",
+        "data/curated/dfire/train/labels/PublicDataset00056.txt:5: degenerate box w=0.0 h=0.002777777777777778"
+      ]
+    },
+    "wildfire": {
+      "status": "ok",
+      "root": "data/curated/wildfire",
+      "n_records": 2699,
+      "splits": {
+        "train": {
+          "n": 1933,
+          "hash": "d771f1849f8f4772"
+        },
+        "val": {
+          "n": 413,
+          "hash": "334244cf8af5ce4d"
+        },
+        "test": {
+          "n": 353,
+          "hash": "fdc87239c608b7cf"
+        }
+      },
+      "split_report": {
+        "counts": {
+          "train": 1933,
+          "test": 353,
+          "val": 413
+        },
+        "n_units": 2688,
+        "n_samples": 2699,
+        "unit_source": {
+          "content_hash": 2699,
+          "near_duplicate_merges": 8
+        },
+        "stratum_counts": {
+          "wildfire|det-u|w0f0": {
+            "train": 1182,
+            "val": 261,
+            "test": 209
+          },
+          "wildfire|det-u|w1f1": {
+            "train": 742,
+            "val": 152,
+            "test": 142
+          }
+        },
+        "respected_native": false,
+        "warnings": []
+      },
+      "verification": {
+        "ok": true,
+        "n_cross_split_exact": 0,
+        "n_cross_split_near": 0,
+        "n_group_violations": 0
+      },
+      "adapter_warnings": [
+        "smoke_only_subdirs is empty. If the audit shows a smoke-only sub-taxonomy, add it to configs/datasets/wildfire.yaml so those samples are excluded from the fire-presence task (rule D2 caveat 2); otherwise state the residual label noise in the manuscript Limitations."
+      ]
+    },
+    "flame3": {
+      "status": "ok",
+      "root": "data/curated/flame3",
+      "n_records": 2172,
+      "splits": {
+        "train": {
+          "n": 1363,
+          "hash": "324480c2065b51da"
+        },
+        "test": {
+          "n": 809,
+          "hash": "bdbaca30970ffe67"
+        }
+      },
+      "split_report": {
+        "counts": {
+          "test": 809,
+          "train": 1363
+        },
+        "n_units": 3,
+        "n_samples": 2172,
+        "unit_source": "explicit_group_splits",
+        "stratum_counts": {},
+        "respected_native": false,
+        "warnings": [
+          "Splits were assigned explicitly by group, not by hash, because this source has 3 independent unit(s) -- too few to divide proportionally (ADR-005). The assignment is fixed in configuration and reviewable there; it does not change when data is added, but adding a new group is an error until it is named.",
+          "split 'val' is empty under the explicit assignment; this is only acceptable if the protocol says so for this source"
+        ]
+      },
+      "verification": {
+        "ok": true,
+        "n_cross_split_exact": 0,
+        "n_cross_split_near": 0,
+        "n_group_violations": 0
+      },
+      "adapter_warnings": []
+    }
+  },
+  "split_config": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15,
+    "seed": 42,
+    "respect_native_splits": false,
+    "cluster_near_duplicates": true,
+    "near_duplicate_threshold": 10,
+    "stratify": true
+  },
+  "warnings": [],
+  "split_overrides": {
+    "flame3": {
+      "override": {
+        "override_reason": "ADR-005: three plots is too few to divide proportionally, and one of them has no recoverable burn phase. Assignment is named per plot instead of hashed.",
+        "explicit_group_splits": {
+          "plot_1": "test",
+          "plot_2": "train",
+          "plot_3": "train"
+        }
+      },
+      "reason": "ADR-005: three plots is too few to divide proportionally, and one of them has no recoverable burn phase. Assignment is named per plot instead of hashed."
+    }
+  },
+  "manifest_fingerprint": "b83ca3c47ab7ecfa60e8b3110bed357adf59f147d0725844fd76d3600b0f48a4"
+}

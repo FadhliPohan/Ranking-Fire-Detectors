@@ -1,0 +1,8 @@
+# Optional appendices only (retraining the YOLO detectors, smoke test of the custom detector).
+# The detectors in the paper were trained with torch 2.5.1 (CUDA 12.4), torchvision 0.20.1 and
+# ultralytics 8.4.124. Install the CUDA build of torch that matches your driver, see https://pytorch.org.
+-r requirements.txt
+torch>=2.1
+torchvision>=0.16
+pillow>=10
+ultralytics==8.4.124
