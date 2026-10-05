@@ -1,10 +1,17 @@
-# Ranking Fire Detectors by mAP50 Versus Alarm Rate
+# Ranking Fire Detectors by mAP50 Versus Alarm Rate: A Four-Detector, Three-Seed Stability Audit on D-Fire
 
-Code and data for the paper
+Analysis code and data for the paper of the same title, submitted to *Signal, Image and Video
+Processing* (Springer), 2026.
 
-> **Ranking Fire Detectors by mAP50 Versus Alarm Rate: A Four-Detector, Three-Seed Stability Audit on D-Fire.**
-> Submitted to *Signal, Image and Video Processing* (Springer).
-> Citation: [ISI: citation once published]
+**Authors**
+
+* Muhammad Fadhli Dzil Ikram (corresponding author), ORCID
+  [0009-0008-1748-8715](https://orcid.org/0009-0008-1748-8715), 09012682529009@student.unsri.ac.id
+* Samsuryadi
+
+Master of Computer Science, Faculty of Computer Science, Sriwijaya University, Palembang, Indonesia.
+
+**Repository:** https://github.com/FadhliPohan/Ranking-Fire-Detectors
 
 The paper asks whether ranking fire and smoke detectors by mAP50 agrees with ranking them by how
 often they raise an alarm on images that annotators verified as containing no fire. Four detectors
@@ -21,11 +28,12 @@ the paper and in the original result tables.
 ranking_fire_detectors.ipynb   the complete analysis (one notebook, no other code)
 requirements.txt               packages for the analysis
 requirements-training.txt      extra packages for the optional training appendix
+CITATION.cff, LICENSE          citation metadata and the MIT licence of the code
 data/
   manifests/                   curated D-Fire split manifests (ground-truth boxes) and their hashes
   recorded/                    GPU efficiency measurements shown in Table 2 (see its README)
   predictions/                 empty: download the stored predictions here (see its README)
-outputs/                       created by the notebook: tables, figures, verification report
+outputs/                       created by the notebook: tables, figures (PNG and PDF), verification report
 ```
 
 The manifests are Parquet files with one row per image: the image path in the D-Fire release, its
@@ -49,16 +57,21 @@ pip install -r requirements.txt
 * **D-Fire** (images and labels) is published by its authors at
   https://github.com/gaiasd/DFireDataset. The analysis does **not** need the images: the boxes it
   uses are in `data/manifests/`. The images are needed only to retrain a detector (Appendix A).
-* **Stored predictions** of the fourteen training runs (about 385 MB of JSON Lines files):
-  [ISI: Zenodo DOI]. Download them and place one folder per run in `data/predictions/`, as
-  described in [`data/predictions/README.md`](data/predictions/README.md). Expected layout:
+* **Stored predictions** of the fourteen training runs (about 385 MB of JSON Lines files) are
+  deposited on Zenodo under CC BY 4.0: [ISI: Zenodo DOI]. The record holds one archive,
+  `dfire_stored_predictions.zip`, whose entries are `predictions/<run>/<split>_dfire.jsonl`, with
+  one folder per run named as the runs were stored by the training project (`resnet18fpn_seed42`,
+  `yolo11n_seed42`, `yolo11s_seed42`, `yolov8s_seed42`, `yolo11n_split_resmi_seed42`, and so on).
+  Unzip it inside the repository's `data/` folder:
 
+  ```bash
+  cd data
+  unzip dfire_stored_predictions.zip
   ```
-  data/predictions/resnet18fpn_seed42/val_dfire.jsonl
-  data/predictions/resnet18fpn_seed42/test_dfire.jsonl
-  ...
-  data/predictions/yolo11n_split_resmi_seed1337/test_dfire.jsonl
-  ```
+
+  This gives `data/predictions/<run>/val_dfire.jsonl` and `data/predictions/<run>/test_dfire.jsonl`
+  for all fourteen runs, which is where the notebook looks by default; nothing else needs to be
+  set. The file format is described in [`data/predictions/README.md`](data/predictions/README.md).
 
 ## How to run
 
@@ -84,12 +97,15 @@ jupyter nbconvert --to notebook --execute ranking_fire_detectors.ipynb --output 
 **Runtime:** about one minute on a laptop CPU, with a peak memory of about 1.2 GB. No GPU is needed.
 
 **Result:** the last section prints a verification summary and ends with `OVERALL: PASS` when every
-check passes. On the reference machine all 357 checks pass: 19 original result tables compared
-cell by cell, the 248 values printed in Tables 1 to 8, 78 in-text numbers, the five-value
-reproduction check, and the presence of the seven figures, which are also byte-identical to the
-published ones. The numerical results were also confirmed
-with numpy 1.26, pandas 2.2 and matplotlib 3.8; with other matplotlib versions the figures show
-the same data but are not byte-identical, which the notebook reports as information, not failure.
+check passes. On the reference machine all 366 checks pass: 19 original result tables compared
+cell by cell, the 248 values printed in Tables 1 to 8, 80 in-text numbers, the five-value
+reproduction check, and the PNG and PDF files of the seven figures. The numerical results were
+also confirmed with numpy 1.26, pandas 2.2 and matplotlib 3.8.
+
+The figures are written as 300-dpi PNG and as vector PDF with embedded TrueType fonts. They carry no
+title inside the image, as the journal's artwork rules require; the explanation is in the caption.
+The figures of the original analysis had such titles, so the notebook's comparison of PNG hashes
+with those files is listed as information only.
 
 ## Where each paper item is produced
 
@@ -103,10 +119,10 @@ the same data but are not byte-identical, which the notebook reports as informat
 | Table 6, permutation floor by number of detectors | 9 | `outputs/tables/Table6_permutation_floor.csv` |
 | Table 7, predictors of the alarm ordering | 11 | `outputs/tables/Table7_predictors.csv` |
 | Table 8, expected cost and sweep-floor flag | 10 | `outputs/tables/Table8_expected_cost.csv` |
-| Fig. 1, mAP50 against false-alarm rate | 6 | `outputs/figures/Fig1.png` |
-| Fig. 2, false-alarm rate against accuracy and capacity | 11 | `outputs/figures/Fig2.png` |
+| Fig. 1, mAP50 against false-alarm rate | 6 | `outputs/figures/Fig1.png`, `Fig1.pdf` |
+| Fig. 2, false-alarm rate against accuracy and capacity | 11 | `outputs/figures/Fig2.png`, `Fig2.pdf` |
 | In-text numbers (ρ, 81-draw distribution, exact *p*, split influence, ...) | 9, 10, 12, 14 | `outputs/tables/intext_numbers.csv` |
-| Extended analysis (longer version of the paper: 13 tables, 7 figures) | 13 | `outputs/tables/ext_*.csv`, `outputs/figures/ExtFig*.png` |
+| Extended analysis (longer version of the paper: 13 tables, 7 figures) | 13 | `outputs/tables/ext_*.csv`, `outputs/figures/ExtFig*.png` and `.pdf` |
 | Verification of everything above | 14 | `outputs/verification_report.csv` |
 
 ## What is recomputed, and what is not
@@ -126,6 +142,9 @@ measured; their provenance and protocol are in [`data/recorded/README.md`](data/
 
 * **Appendix A** retrains YOLO11n, YOLO11s and YOLOv8s with Ultralytics under the locked settings
   (mosaic, mixup and copy-paste off) and exports predictions in the format the analysis reads. It
+  repeats the training call as it was run: batch 8 with Ultralytics' default nominal batch size
+  `nbs=64`, so gradients are accumulated over 8 steps (effective batch 64). The custom
+  ResNet18+FPN+FCOS detector was trained with batch 8 and 2-step accumulation (effective batch 16). It
   needs a CUDA GPU, the D-Fire images (`DFIRE_ROOT`) and `pip install -r requirements-training.txt`.
   It is off by default (`RUN_TRAINING = False`).
 * **Appendix B** contains a compact port of the custom ResNet18+FPN+FCOS detector (model, target
@@ -136,8 +155,26 @@ measured; their provenance and protocol are in [`data/recorded/README.md`](data/
 Ultralytics is distributed under AGPL-3.0; it is used only in Appendix A and is not needed for the
 analysis.
 
+## How to cite
+
+If you use this code or the stored predictions, please cite the paper:
+
+> Muhammad Fadhli Dzil Ikram and Samsuryadi. Ranking Fire Detectors by mAP50 Versus Alarm Rate:
+> A Four-Detector, Three-Seed Stability Audit on D-Fire. Manuscript submitted to *Signal, Image
+> and Video Processing*, 2026. DOI: [ISI: DOI of the paper once published].
+
+and, for the code and data themselves:
+
+> Muhammad Fadhli Dzil Ikram and Samsuryadi. Ranking-Fire-Detectors: analysis code and stored
+> predictions, 2026. Code: https://github.com/FadhliPohan/Ranking-Fire-Detectors.
+> Predictions: Zenodo, [ISI: Zenodo DOI].
+
+Citation metadata for the repository is also given in [`CITATION.cff`](CITATION.cff).
+
 ## License
 
-[ISI: license]
-
-The D-Fire dataset is subject to the terms of its authors; see their repository.
+* **Code** (the notebook and everything else in this repository): MIT License, see [`LICENSE`](LICENSE).
+* **Stored predictions** on Zenodo: Creative Commons Attribution 4.0 International (CC BY 4.0).
+* **D-Fire images and labels** keep the licence set by their authors; see
+  https://github.com/gaiasd/DFireDataset. The manifests in `data/manifests/` contain box
+  coordinates derived from those labels.

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or the stored predictions, please cite it as below, together with the paper."
+title: "Ranking Fire Detectors by mAP50 Versus Alarm Rate: A Four-Detector, Three-Seed Stability Audit on D-Fire"
+type: software
+authors:
+  - family-names: "Dzil Ikram"
+    given-names: "Muhammad Fadhli"
+    email: "09012682529009@student.unsri.ac.id"
+    orcid: "https://orcid.org/0009-0008-1748-8715"
+    affiliation: "Master of Computer Science, Faculty of Computer Science, Sriwijaya University, Palembang, Indonesia"
+  - family-names: "Samsuryadi"
+    affiliation: "Master of Computer Science, Faculty of Computer Science, Sriwijaya University, Palembang, Indonesia"
+repository-code: "https://github.com/FadhliPohan/Ranking-Fire-Detectors"
+license: MIT
+date-released: "2026-10-05"
+keywords:
+  - fire and smoke detection
+  - false alarm rate
+  - evaluation methodology
+  - rank correlation
+  - seed variance
+  - D-Fire

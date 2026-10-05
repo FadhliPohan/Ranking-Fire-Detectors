@@ -1,19 +1,22 @@
 # Stored predictions
 
 This folder is empty in the repository. The prediction files are too large for version control
-(about 385 MB in total, most of it the custom detector's files) and are deposited separately:
+(about 385 MB in total, most of it the custom detector's files) and are deposited separately on
+Zenodo under CC BY 4.0:
 
 **Download:** [ISI: Zenodo DOI]
 
-Place one folder per run here, each holding the validation and test predictions of that run:
+The Zenodo record holds one archive, `dfire_stored_predictions.zip`, whose entries are
+`predictions/<run>/<split>_dfire.jsonl`. Unzip it inside the repository's `data/` folder
+(`cd data && unzip dfire_stored_predictions.zip`), which fills this folder as follows:
 
 ```
 data/predictions/
-├── resnet18fpn_seed42/         val_dfire.jsonl   test_dfire.jsonl
-├── resnet18fpn_seed1337/       val_dfire.jsonl   test_dfire.jsonl
-├── resnet18fpn_seed2024/       val_dfire.jsonl   test_dfire.jsonl
-├── yolo11n_seed42/             val_dfire.jsonl   test_dfire.jsonl
-├── yolo11n_seed1337/           ...
+├── resnet18fpn_seed42/             val_dfire.jsonl   test_dfire.jsonl
+├── resnet18fpn_seed1337/           val_dfire.jsonl   test_dfire.jsonl
+├── resnet18fpn_seed2024/           ...
+├── yolo11n_seed42/
+├── yolo11n_seed1337/
 ├── yolo11n_seed2024/
 ├── yolo11s_seed42/
 ├── yolo11s_seed1337/
@@ -25,11 +28,11 @@ data/predictions/
 └── yolo11n_split_resmi_seed1337/
 ```
 
-The folder names are those under which the original project stored the runs. The notebook also
-accepts the English run identifiers it uses internally (for example `yolo11n_official_seed42`
-instead of `yolo11n_split_resmi_seed42`), and a `prediksi/` sub-folder inside each run folder, which
-is the layout of the original project. To keep the files elsewhere, set `FIRE_PRED_DIR` to the
-folder that contains the run folders.
+This is the default location of the notebook, so nothing needs to be configured. The folder names
+are those under which the training project stored the runs; the notebook also accepts the English
+run identifiers it uses internally (for example `yolo11n_official_seed42` instead of
+`yolo11n_split_resmi_seed42`). To keep the files elsewhere, set `FIRE_PRED_DIR` to the folder that
+contains the run folders.
 
 | Run folder | Detector | Seed | Partition | Experiment code | Images (val / test) |
 |---|---|---|---|---|---|
