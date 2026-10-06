@@ -5,8 +5,8 @@ Processing* (Springer), 2026.
 
 **Authors**
 
-* Muhammad Fadhli Dzil Ikram (corresponding author), ORCID
-  [0009-0008-1748-8715](https://orcid.org/0009-0008-1748-8715), 09012682529009@student.unsri.ac.id
+* Muhammad Fadhli Dzil Ikram Pohan (corresponding author), ORCID
+  [0009-0008-1748-8715](https://orcid.org/0009-0008-1748-8715), muhammadfadly.mfd@gmail.com
 * Samsuryadi
 
 Master of Computer Science, Faculty of Computer Science, Sriwijaya University, Palembang, Indonesia.
@@ -58,7 +58,7 @@ pip install -r requirements.txt
   https://github.com/gaiasd/DFireDataset. The analysis does **not** need the images: the boxes it
   uses are in `data/manifests/`. The images are needed only to retrain a detector (Appendix A).
 * **Stored predictions** of the fourteen training runs (about 385 MB of JSON Lines files) are
-  deposited on Zenodo under CC BY 4.0: [ISI: Zenodo DOI]. The record holds one archive,
+  deposited on Zenodo under CC BY 4.0: https://doi.org/10.5281/zenodo.23166787. The record holds one archive,
   `dfire_stored_predictions.zip`, whose entries are `predictions/<run>/<split>_dfire.jsonl`, with
   one folder per run named as the runs were stored by the training project (`resnet18fpn_seed42`,
   `yolo11n_seed42`, `yolo11s_seed42`, `yolov8s_seed42`, `yolo11n_split_resmi_seed42`, and so on).
@@ -102,8 +102,10 @@ cell by cell, the 248 values printed in Tables 1 to 8, 80 in-text numbers, the f
 reproduction check, and the PNG and PDF files of the seven figures. The numerical results were
 also confirmed with numpy 1.26, pandas 2.2 and matplotlib 3.8.
 
-The figures are written as 300-dpi PNG and as vector PDF with embedded TrueType fonts. They carry no
-title inside the image, as the journal's artwork rules require; the explanation is in the caption.
+The figures are written as 600-dpi PNG and as vector PDF with embedded TrueType fonts, at their
+final printed size: Fig. 1 is one column wide (3.00 in), Fig. 2 spans 4.55 in, and lettering is
+9 pt for axis labels and panel letters and 8 pt for tick labels and legends. They carry no title
+inside the image, as the journal's artwork rules require; the explanation is in the caption.
 The figures of the original analysis had such titles, so the notebook's comparison of PNG hashes
 with those files is listed as information only.
 
@@ -159,15 +161,15 @@ analysis.
 
 If you use this code or the stored predictions, please cite the paper:
 
-> Muhammad Fadhli Dzil Ikram and Samsuryadi. Ranking Fire Detectors by mAP50 Versus Alarm Rate:
+> Muhammad Fadhli Dzil Ikram Pohan and Samsuryadi. Ranking Fire Detectors by mAP50 Versus Alarm Rate:
 > A Four-Detector, Three-Seed Stability Audit on D-Fire. Manuscript submitted to *Signal, Image
 > and Video Processing*, 2026. DOI: [ISI: DOI of the paper once published].
 
 and, for the code and data themselves:
 
-> Muhammad Fadhli Dzil Ikram and Samsuryadi. Ranking-Fire-Detectors: analysis code and stored
+> Muhammad Fadhli Dzil Ikram Pohan and Samsuryadi. Ranking-Fire-Detectors: analysis code and stored
 > predictions, 2026. Code: https://github.com/FadhliPohan/Ranking-Fire-Detectors.
-> Predictions: Zenodo, [ISI: Zenodo DOI].
+> Predictions: Zenodo, https://doi.org/10.5281/zenodo.23166787.
 
 Citation metadata for the repository is also given in [`CITATION.cff`](CITATION.cff).
 

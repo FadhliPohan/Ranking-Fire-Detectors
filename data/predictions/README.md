@@ -4,7 +4,7 @@ This folder is empty in the repository. The prediction files are too large for v
 (about 385 MB in total, most of it the custom detector's files) and are deposited separately on
 Zenodo under CC BY 4.0:
 
-**Download:** [ISI: Zenodo DOI]
+**Download:** https://doi.org/10.5281/zenodo.23166787
 
 The Zenodo record holds one archive, `dfire_stored_predictions.zip`, whose entries are
 `predictions/<run>/<split>_dfire.jsonl`. Unzip it inside the repository's `data/` folder
